@@ -116,3 +116,17 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-11-17 00:17:02 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  Rendered users/index.html.haml within layouts/application (20.5ms)
+Completed 200 OK in 76ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-17 00:17:04 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.haml within layouts/application
+  Rendered users/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
