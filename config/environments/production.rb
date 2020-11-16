@@ -22,7 +22,7 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  set :rails_env, "production"
+    set :rails_env, "production"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
