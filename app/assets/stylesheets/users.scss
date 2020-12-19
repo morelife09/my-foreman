@@ -4,7 +4,7 @@ $cBlack: black;
 #container {
   text-align: center;
 
-  .btn {
+  &.btn {
     background-color: $cWhite;
     color: $cBlack;
     border: 2px solid $cBlack;
@@ -12,20 +12,14 @@ $cBlack: black;
     font-weight: 600px;
     cursor: pointer;
     margin: 100px 0;
-    transition: color 0.3s ease 1s,
-                background-color 0.3s ease 2s ;
+    transition: all 0.1s;
 
-    &.float {
-      &:hover {
-        box-shadow: 0 0 10px $cBlack;
-      }
+    &.float:hover {
+      background-color: $cBlack;
+      color: $cWhite;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     }
   }
-
-  // .btn:hover {
-  //   background-color: $cBlack;
-  //   color: $cWhite;
-  // }
 }
 
 h2 {

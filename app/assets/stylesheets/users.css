@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-#container .btn {
+#container.btn {
   background-color: white;
   color: black;
   border: 2px solid black;
@@ -14,7 +14,7 @@
   transition: color 0.3s ease 1s, background-color 0.3s ease 2s;
 }
 
-#container .btn.float:hover {
+#container.btn.float:hover {
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
 }
