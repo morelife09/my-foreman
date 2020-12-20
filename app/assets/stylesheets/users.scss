@@ -3,6 +3,7 @@ $cBlack: black;
 
 #container {
   text-align: center;
+  // display: flex;
 
   &.btn {
     background-color: $cWhite;
@@ -11,13 +12,31 @@ $cBlack: black;
     padding: 10px 40px;
     font-weight: 600px;
     cursor: pointer;
-    margin: 100px 0;
+    margin: 100px 20px;
     transition: all 0.1s;
 
     &.float:hover {
       background-color: $cBlack;
       color: $cWhite;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &.filled:hover {
+      background-color: $cBlack;
+      color: $cWhite;
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+
+      &:hover {
+        background-color: $cWhite;
+        color: $cBlack;
+        box-shadow: none;
+      }
+    }
+
+    &.letter-spacing:hover {
+      background-color: $cBlack;
+      letter-spacing: 3px;
+      color: $cWhite;
     }
   }
 }
