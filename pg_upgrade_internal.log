@@ -5,3 +5,10 @@
 
 check for "/usr/local/Cellar/postgresql/9.5.4/bin" failed: No such file or directory
 
+
+-----------------------------------------------------------------
+  pg_upgrade run on Sat Jan  2 18:10:09 2021
+-----------------------------------------------------------------
+
+You must identify the directory where the old cluster binaries reside.
+Please use the -b command-line option or the PGBINOLD environment variable.
