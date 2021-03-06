@@ -1,35 +1,37 @@
 !!!
 %html
-  -# %head
-  -#   #h1 Javascript基礎
-  -#   #container
-  -#     .answer
-  -#       %button.btn.float
-  -#         Button
-  -#       %button.btn.filled
-  -#         Button
-  -#       %button.btn.letter-spacing
-  -#         Button
-  -#       %button.btn.shadow
-  -#         Button
-  -#       %button.btn.solid
-  -#         Button
+  %head
+    -# #h1 Javascript基礎
+    -# #container
+    -#   .answer
+    -#     %button.btn.float
+    -#       Button
+    -#     %button.btn.filled
+    -#       Button
+    -#     %button.btn.letter-spacing
+    -#       Button
+    -#     %button.btn.shadow
+    -#       Button
+    -#     %button.btn.solid
+    -#       Button
 
-  -#   #rect
+    -# -# #rect
 
-  -#   #content
-  -#     %button.btn.slide-bg
-  -#       =link_to "Button", new_user_path
+    -# -# #content
+    -#   %button.btn.slide-bg
+    -#     =link_to "Button", new_user_path
 
-    -# #parent
-  -#     .child child
-  -#     .child.v2 child 2
-  -#     .child.v3 child 3
+    -# -# #parent
+    -#   .child child
+    -#   .child.v2 child 2
+    -#   .child.v3 child 3
 
-    #ontainer
+
+    #container
       .animate-title
         PLAY ANIMATION
       .animate-title-2
         ANIMATE STRING
-      %button onclick="document.querySelector('.animate-title').classList.toggle('inview');">Animation
+      %button.onclick="document.querySelector('.animate-title').classList.toggle('inview');"
+      Animation
     %script(src="main.js")
