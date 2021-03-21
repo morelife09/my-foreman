@@ -105,22 +105,45 @@
 // btn.addEventListener('click', hello);
 // btn.removeEventListener('click', hello);
 
-document.addEventListener('DOMContentLoaded', function () {
-  const btn = document.querySelector('#btn');
-    const ta = new TextAnimation('.animate-title');
-    const ta2 = new TextAnimation('.animate-title-2');
-    setTimeout(() => {
-        ta.animate();
-        ta2.animate();
-      btn.addEventListener('click', ta.animate.bind(ta));
-    });
+// document.addEventListener('DOMContentLoaded', function () {
+//   const btn = document.querySelector('#btn');
+//     const ta = new TextAnimation('.animate-title');
+//     const ta2 = new TextAnimation('.animate-title-2');
+//     setTimeout(() => {
+//         ta.animate();
+//         ta2.animate();
+//       btn.addEventListener('click', ta.animate.bind(ta));
+//     });
+// });
+
+// class TextAnimation {
+//     constructor(el) {
+//         this.el = document.querySelector(el);
+//         this.chars = this.el.innerHTML.trim().split("");
+//         this.el.innerHTML = this._splitText();
+//     }
+//     _splitText() {
+//         return this.chars.reduce((acc, curr) => {
+//             curr = curr.replace(/\s+/, '&nbsp;');
+//             return `${acc}<span class="char">${curr}</span>`;
+//         }, "");
+//     }
+//     animate() {
+//         this.el.classList.toggle('inview');
+//     }
+// }
+
+document.addEventListener('DOMcontentLoaded', function () {
+    const ta = new TweenTextAnimation('.tween-animate-title');
+    ta.animate();
 });
 
 class TextAnimation {
     constructor(el) {
-        this.el = document.querySelector(el);
-        this.chars = this.el.innerHTML.trim().split("");
-        this.el.innerHTML = this._splitText();
+        this.DOM = {};
+        this.DOM.el = document.querySelector(el);
+        this.chars = this.DOM.el.innnerHTML.trim().sprot("");
+        this.DOM.el.innnerHTML = this._splitText();
     }
     _splitText() {
         return this.chars.reduce((acc, curr) => {
@@ -128,7 +151,25 @@ class TextAnimation {
             return `${acc}<span class="char">${curr}</span>`;
         }, "");
     }
-    animate() {
-        this.el.classList.toggle('inview');
+    animete() {
+        this.DOM.el.classList.toggle('inview');
+    }
+}
+class TweenTextAnimation extends TextAnimation {
+    constructor(el) {
+        super(el);
+        this.DOM.chars = this.DOM.el.querySelectorAll('.char');
+    }
+    animete() {
+        this.DOM.el.classList.add('inview');
+        this.DOM.chars.foreEach((c, 1) => {
+            TweenMax.to(c, .6, {
+                ease: Back.easeOut,
+                delay: i * .05,
+                startAt: { y: '-50%', opacity: 0 },
+                y: '0%',
+                opacity: 1
+            });
+        });
     }
 }
