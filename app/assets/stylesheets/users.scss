@@ -1,182 +1,5 @@
-// $cWhite: white;
-// $cBlack: black;
-
-// #container {
-//   text-align: center;
-//   display: flex;
-//   justify-content: center;
-
-//   & > div {
-//     flex-basis: 500px;
-//   }
-// }
-
-// .answer {
-
-//   & .btn {
-//     position: relative;
-//     display: inline-block;
-//     background-color: $cWhite;
-//     border: 1px solid $cBlack;
-//     font-weight: 600;
-//     padding: 10px 40px;
-//     margin: 10px auto;
-//     cursor: pointer;
-//     transition: all 0.3s;
-//     color: $cBlack;
-//     text-decoration: none !important;
-
-//     &.float:hover {
-//       background-color: $cBlack;
-//       color: $cWhite;
-//       box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-//     }
-
-//     &.filled {
-//       background-color: $cBlack;
-//       color: $cWhite;
-//       box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-
-//       &:hover {
-//         background-color: $cWhite;
-//         color: $cBlack;
-//         box-shadow: none;
-//       }
-//     }
-
-//     &.letter-spacing:hover {
-//       background-color: $cBlack;
-//       letter-spacing: 3px;
-//       color: $cWhite;
-//     }
-
-//     &.shadow {
-//       box-shadow: none;
-
-//       &:hover {
-//         transform: translate(-2.5px, -2.5px);
-//         box-shadow: 5px 5px 0 0 $cBlack;
-//       }
-//     }
-
-//     &.solid {
-//       box-shadow: 2px 2px 0 0 $cBlack;
-//       border-radius: 7px;
-
-//       &:hover {
-//         transform: translate(2px, 2px);
-//         box-shadow: none;
-//       }
-//     }
-//   }
-// }
-
-// #rect {
-//   width: 100px;
-//   height: 100px;
-//   margin: 0 auto;
-//   background-color: orangered;
-//   // transform: translate(100px) scaleY(2);
-//   transform: rotate(40deg);
-//   // transform: skew(-30deg, -30deg);
-//   transform-origin: 20px -400px;
-// }
-
-// #content {
-//   text-align: center;
-// }
-
-// .btn {
-//   background-color: $cWhite;
-//   color: $cBlack;
-//   border: 1px solid $cBlack;
-//   padding: 10px 40px;
-//   margin: 50px 0;
-//   font-weight: 600;
-//   cursor: pointer;
-//   transition: all 0.3s;
-
-//   &.slide-bg {
-//     position: relative;
-//     overflow: hidden;
-//     z-index: 1;
-//     text-decoration: none;
-
-
-//     &::before {
-//         content: '';
-//       display: inline-block;
-//       width: 100%;
-//       height: 100%;
-//       background-color: $cBlack;
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       transform: translateX(-100%);
-//       transition: transform 0.3s;
-//       z-index: -1;
-//     }
-
-//     &:hover {
-//         color: $cWhite;
-
-//       &::before {
-//           transform: none;
-//       }
-//     }
-//   }
-// }
-
-// #parent {
-//   background-color: rgb(81, 218, 218);
-//   height: 600px;
-//   width: 100%;
-//   text-align: center;
-//   // letter-spacing: -6px;
-//   // position: relative;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   align-items: center;
-// }
-
-// .child {
-//   background-color: orange;
-//   width: 100px;
-//   height: 100px;
-//   font-weight: 600;
-//   // flex-grow: 1;
-//   // flex-basis: 300px;
-//   // display: inline-block;
-//   // margin: 0 auto;
-//   // position: absolute;
-//   // top: 50%;
-//   // left: 50%;
-//   // transform: translate(-50%, -50%);
-// }
-// .child.v1 {
-//   flex-shrink: 0;
-// }
-// .child.v2 {
-//   width: 200px;
-//   height: 200px;
-//   background-color: palevioletred;
-//   // flex-grow: 1;
-// }
-// .child.v3 {
-//   background-color: rebeccapurple;
-//   // flex-grow: 1;
-// }
-
-// #h1 {
-//   font-size: 100px;
-//   text-align: center;
-// }
-
-@import "mixin";
-
 html {
-    font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
 }
 
 body {
@@ -190,45 +13,217 @@ body {
 }
 
 .animate-title,
-.animate-title-2 {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+.tween-animate-title {
   color: white;
   opacity: 0;
   font-size: 2em;
+}
 
-  &.inview {
+.animate-title.inview,
+.tween-animate-title.inview {
+  opacity: 1;
+}
+
+.animate-title.inview .char,
+.tween-animate-title.inview .char {
+  display: inline-block;
+}
+
+.animate-title .char,
+.tween-animate-title .char {
+  opacity: 0;
+}
+
+.animate-title.inview .char {
+  -webkit-animation-name: kf-animate-chars;
+          animation-name: kf-animate-chars;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
+          animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animate-title.inview .char:nth-child(1) {
+  -webkit-animation-delay: 0.04s;
+          animation-delay: 0.04s;
+}
+
+.animate-title.inview .char:nth-child(2) {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+
+.animate-title.inview .char:nth-child(3) {
+  -webkit-animation-delay: 0.12s;
+          animation-delay: 0.12s;
+}
+
+.animate-title.inview .char:nth-child(4) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+
+.animate-title.inview .char:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.animate-title.inview .char:nth-child(6) {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
+}
+
+.animate-title.inview .char:nth-child(7) {
+  -webkit-animation-delay: 0.28s;
+          animation-delay: 0.28s;
+}
+
+.animate-title.inview .char:nth-child(8) {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+
+.animate-title.inview .char:nth-child(9) {
+  -webkit-animation-delay: 0.36s;
+          animation-delay: 0.36s;
+}
+
+.animate-title.inview .char:nth-child(10) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.animate-title.inview .char:nth-child(11) {
+  -webkit-animation-delay: 0.44s;
+          animation-delay: 0.44s;
+}
+
+.animate-title.inview .char:nth-child(12) {
+  -webkit-animation-delay: 0.48s;
+          animation-delay: 0.48s;
+}
+
+.animate-title.inview .char:nth-child(13) {
+  -webkit-animation-delay: 0.52s;
+          animation-delay: 0.52s;
+}
+
+.animate-title.inview .char:nth-child(14) {
+  -webkit-animation-delay: 0.56s;
+          animation-delay: 0.56s;
+}
+
+.animate-title.inview .char:nth-child(15) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.animate-title.inview .char:nth-child(16) {
+  -webkit-animation-delay: 0.64s;
+          animation-delay: 0.64s;
+}
+
+.animate-title.inview .char:nth-child(17) {
+  -webkit-animation-delay: 0.68s;
+          animation-delay: 0.68s;
+}
+
+.animate-title.inview .char:nth-child(18) {
+  -webkit-animation-delay: 0.72s;
+          animation-delay: 0.72s;
+}
+
+.animate-title.inview .char:nth-child(19) {
+  -webkit-animation-delay: 0.76s;
+          animation-delay: 0.76s;
+}
+
+.animate-title.inview .char:nth-child(20) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.animate-title.inview .char:nth-child(21) {
+  -webkit-animation-delay: 0.84s;
+          animation-delay: 0.84s;
+}
+
+.animate-title.inview .char:nth-child(22) {
+  -webkit-animation-delay: 0.88s;
+          animation-delay: 0.88s;
+}
+
+.animate-title.inview .char:nth-child(23) {
+  -webkit-animation-delay: 0.92s;
+          animation-delay: 0.92s;
+}
+
+.animate-title.inview .char:nth-child(24) {
+  -webkit-animation-delay: 0.96s;
+          animation-delay: 0.96s;
+}
+
+.animate-title.inview .char:nth-child(25) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animate-title.inview .char:nth-child(26) {
+  -webkit-animation-delay: 1.04s;
+          animation-delay: 1.04s;
+}
+
+.animate-title.inview .char:nth-child(27) {
+  -webkit-animation-delay: 1.08s;
+          animation-delay: 1.08s;
+}
+
+.animate-title.inview .char:nth-child(28) {
+  -webkit-animation-delay: 1.12s;
+          animation-delay: 1.12s;
+}
+
+.animate-title.inview .char:nth-child(29) {
+  -webkit-animation-delay: 1.16s;
+          animation-delay: 1.16s;
+}
+
+.animate-title.inview .char:nth-child(30) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+@-webkit-keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
     opacity: 1;
-
-    & .char {
-      display: inline-block;
-
-      @include animation(
-        $name: kf-animate-chars,
-        $duration: 0.5s,
-        $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
-        $fill-mode: both
-      );
-
-      @for $i from 1 through 30 {
-          &:nth-child(#{$i}) {
-              animation-delay: $i * 0.04s;
-          }
-      }
-    }
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes kf-animate-chars {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
-
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
+/*# sourceMappingURL=style.css.map */
