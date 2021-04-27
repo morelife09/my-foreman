@@ -1,6 +1,5 @@
 @import "mixin";
 
-<<<<<<< HEAD
 html {
   font-family: "Teko", sans-serif;
 }
@@ -9,7 +8,7 @@ body {
   margin: 0;
 }
 
-#section {
+section {
   position: relative;
   height: 100vh;
   background-color: teal;
@@ -37,48 +36,9 @@ body {
 
     & .char {
       display: inline-block;
-=======
-#container {
-  text-align: center;
-  // display: flex;
-
-  &.btn {
-    background-color: $cWhite;
-    color: $cBlack;
-    border: 2px solid $cBlack;
-    padding: 10px 40px;
-    font-weight: 600px;
-    cursor: pointer;
-    margin: 100px 20px;
-    transition: all 0.1s;
-
-    &.float:hover {
-      background-color: $cBlack;
-      color: $cWhite;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    &.filled:hover {
-      background-color: $cBlack;
-      color: $cWhite;
-      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-
-      &:hover {
-        background-color: $cWhite;
-        color: $cBlack;
-        box-shadow: none;
-      }
-    }
-
-    &.letter-spacing:hover {
-      background-color: $cBlack;
-      letter-spacing: 3px;
-      color: $cWhite;
->>>>>>> parent of 62759a2 (commit)
     }
   }
 
-<<<<<<< HEAD
   & .char {
     opacity: 0;
   }
@@ -110,9 +70,3 @@ body {
     transform: translateY(0);
   }
 }
-=======
-h2 {
-  font-size: 20px;
-  text-align: center;
-}
->>>>>>> parent of 62759a2 (commit)
