@@ -2,15 +2,41 @@
 %html
   %head
   %body
-    #section
-      .animate-title
-        Start where you are.
-    #section
-      .animate-title
-        Use what you have.
-    #section
-      .animate-title
-        Dark after crazy.
+    #global-container
+      #container
+        .mobile-menu__cover
+        %header.header
+          %btn.mobile-menu__btn
+            %span
+            %span
+            %span
+        #section
+          .animate-title
+            Start where you are.
+        #section
+          .animate-title
+            Use what you have.
+        #section
+          .animate-title
+            Dark after crazy.
+      %nav.mobile-menu
+        %ul.mobile-menu__main
+          %li.mobile-menu__item
+            %a.mobile-menu__link(href='#')
+              %span.main-title
+                Our Service
+              %span.sub-title
+                サービスについて
+            %a.mobile-menu__link(href='#')
+              %span.main-title
+                About Us
+              %span.sub-title
+                私たちについて
+            %a.mobile-menu__link(href='#')
+              %span.main-title
+                Contact Us
+              %span.sub-title
+                コンタクト方法
 
     %script(src="text-animation.js")
     %script(src="scroll-polyfill.js")
