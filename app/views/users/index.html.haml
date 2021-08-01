@@ -1,19 +1,8 @@
 !!!
 %html
   %head
-    %meta(charset="UFT-8")/
-    %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
-    %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
-    %meta(name="description" content="This site is a test site.")/
-    %link(rel="icon" href="image/favicon.png")/
-    %link(rel="stylesheet" href="styles/loder.css")/
-    %link(href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet")/
-    %link(rel="stylesheet" href="styles/vendors/bootstrap-reboot.css")/
-    %link(rel="stylesheet" href="styles/vendors/swiper.min.css")/
-    %link(rel="stylesheet" href="styles/style.css")/
-    -# %script(src="scripts/vendors/pace.js")/
-
   %body
+
     #global-container
       #container
         .mobile-menu__cover
@@ -21,167 +10,178 @@
         %header.header
           .header__innerappearup
             .logoitem
-              %img(src="images/logo.svg" alt="" class="logo__img")
-              .logo_stay Stay
-              .logo_world World
+              =image_tag asset_path("logo.svg"), class:"logo__img"
+              %p My-Forman
             %nav.header__nav
               %ul.header__ul
                 %li.header__liitem
-                  %a(href='#') Service
+                  %a(href='#') Service,
                 %li.header__liitem
-                  %a(href='#') company
+                  %a(href='#') company,
                 %li.header__liitem
                   %a.btnfilled(href='#') Contact
 
-            %btn.mobile-menu__btn
-              %span
-              %span
-              %span
-        #content
-          .hero
-            .swiper-container
-              .swiper-wrapper
-                .swiper-slide
-                  .hero__title Enjoy Rich
-                  %img(src="images/image-1.jpg" alt="")
-                .swiper-slide
-                  %img(src="images/image-2.jpg" alt="")
-                .swiper-slide
-                  %img(src="images/image-3.jpg" alt="")
-              .hero__footer
-                %img.hero__downarrow(src="images/arrow.svg")
-                %span.hero__scrolltext scroll
-          #main-content
-            %aside.sideleft
-              .side__inner
-                %a.twittericontween-animate-title(href="#") Twitter
-                %a.fbicontween-animate-title(href="#") Facebook
-            %main
-              %section.travel
-                .travel__inner
-                  .tarvel__imgcover-slide
-                    %img.img-zoom(src="images/image-travel.jpg" alt="")
-                  .travel__textsappearleft
-                    .travel__texts-inner
-                      .travel__titlemain-titleitem
-                        %span.purple Travel
-                        %span the world
-                      .travel__subsub-titleitem 世界中を旅しよう
-                      .travel__descriptionitem
-                        %p 世界１５０ヵ国で
-                        %p 利用できる民宿サービスです。
-                        %p あなたの望む宿がきっと見つかります。
-                      .travel__btnitem
-                        %btn.btnfilled もっと詳しく
-              %section.houses
-                %div
-                  %h2.main-titletween-animate-title Find Your House
-                  %p.sub-titletween-animate-title お気に入りの宿泊先を見つけましょう
-                .houses__inner
-                  .houses__item
-                    .cover-slidehover-darken
-                      .bg-img-zoomimg-bg50
-                      .background-image: url(images/villa-2.jpg)
-                    %P.hounes__title Home 1
-                  .hounes__item
-                    .cover-slidehover-darken
-                      .bg-img-zoomimg-bg50
-                      .background-image: url(images/villa-2.jpg)
-                    %P.hounes__title Home 2
-                  .hounes__item
-                    .cover-slidehover-darken
-                      .bg-img-zoomimg-bg50
-                      .background-image: url(images/villa-3.jpg)
-                    %P.hounes__title Home 3
-                  .hounes__item
-                    .cover-slidehover-darken
-                      .bg-img-zoomimg-bg50
-                      .background-image: url(images/villa-4.jpg)
-                    %P.hounes__title Home 4
-                  .hounes__item
-                    .cover-slidehover-darken
-                      .bg-img-zoomimg-bg50
-                      .background-image: url(images/villa-5.jpg)
-                    %P.hounes__title Home 5
-                  .hounes__item
-                    .cover-slidehover-darken
-                      .bg-img-zoomimg-bg50
-                      .background-image: url(images/villa-6.jpg)
-                    %P.hounes__title Home 6
-                  .hounes__btnappearup
-                    %btn.btnslide-bgitem もっと詳しく
-              %section.popular
-                .popular__header
-                  %h2.main-titletween-animate-title Popular %Place
-                  %p.sub-titletween-animate-title 人気の観光地で宿泊先を見つけましょう
-                .popular__innerappearup
-                  .popular__container
-                    .popular__itemitem
-                      .popular__img
-                        %img(src="images/image-p1.jpg" alt="")
-                      .popular__title バリ
-                    .popular__itemitem
-                      .popular__img
-                        %img(src="images/image-p2.jpg" alt="")
-                      .popular__title ニューヨーク
-                    .popular__itemitem
-                      .popular__img
-                        %img(src="images/image-p3.jpg" alt="")
-                      .popular__title 香港
-                    .popular__itemitem
-                      .popular__img
-                        %img(src="images/image-p4.jpg" alt="")
-                      .popular__title 大阪
-                    .popular__btnappearup
-                      %btn.btncover-3ditem
-                        %span 一覧から探す
-            %aside.sideright
-              .side__inner
-                %span.tween-animate-title &copy;Code Mafia
-        %footer.footerappearup
-          .logoitem
-            %img(src="images/logo.svg" alt="" class="logo__img")
-            %span.logo__stay Stay
-            %span.logo__world World
-          %nav.footer__nav
-            %ul.footer__ul
-              %li.footer__liitem
-                %a(href='#') Service
-              %li.footer__liitem
-                %a(href='#') Contact
-              %li.footer__liitem
-                %a(href='#') Company
-              %li.footer__liitem
-                %a(href='#') Sitemap
-            .footer__copyrightitem
-              &copy; JVSN09
-      %nav.mobile-menu
-        .logo
+        -# .tween-animate-title Animation Title
+        .cover-slide.hover-darken
+          =image_tag asset_path("IMG_0969.jpeg"), alt:"", class:"img-zoom"
+
+      %btn.mobile-menu__btn
+        %span
+        %span
+        %span
+      #content
+        .hero
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide
+              .hero__title
+                =image_tag ("image-1.jpg")
+              .swiper-slide
+                =image_tag ("image-2.jpg")
+              .swiper-slide
+                %img(src="images/image-3.jpg" alt="")
+            .hero__footer
+              %img.hero__downarrow(src="images/arrow.svg")
+              %span.hero__scrolltext scroll
+        #main-content
+          %aside.sideleft
+            .side__inner
+              %a.twittericontween-animate-title(href="#") Twitter
+              %a.fbicontween-animate-title(href="#") Facebook
+          %main
+            %section.travel
+              .travel__inner
+                .tarvel__imgcover-slide
+                  =image_tag ("image-p1.jpg"), alt:"", class:"img-zoom"
+                .travel__textsappearleft
+                  .travel__texts-inner
+                    .travel__titlemain-titleitem
+                      %span.purple Travel
+                      %span the world
+                    .travel__subsub-titleitem 世界中を旅しよう
+                    .travel__descriptionitem
+                      %p 世界１５０ヵ国で
+                      %p 利用できる民宿サービスです。
+                      %p あなたの望む宿がきっと見つかります。
+                    .travel__btnitem
+                      %btn.btnfilled もっと詳しく
+            %section.houses
+              %div
+                %h2.main-titletween-animate-title Find Your House
+                %p.sub-titletween-animate-title お気に入りの宿泊先を見つけましょう
+              .houses__inner
+                .houses__item
+                  .cover-slidehover-darken
+                    .bg-img-zoomimg-bg50
+                    .background-image: url(images/villa-2.jpg)
+                  %P.hounes__title Home 1
+                .hounes__item
+                  .cover-slidehover-darken
+                    .bg-img-zoomimg-bg50
+                    .background-image: url(images/villa-2.jpg)
+                  %P.hounes__title Home 2
+                .hounes__item
+                  .cover-slidehover-darken
+                    .bg-img-zoomimg-bg50
+                    .background-image: url(images/villa-3.jpg)
+                  %P.hounes__title Home 3
+                .hounes__item
+                  .cover-slidehover-darken
+                    .bg-img-zoomimg-bg50
+                    .background-image: url(images/villa-4.jpg)
+                  %P.hounes__title Home 4
+                .hounes__item
+                  .cover-slidehover-darken
+                    .bg-img-zoomimg-bg50
+                    .background-image: url(images/villa-5.jpg)
+                  %P.hounes__title Home 5
+                .hounes__item
+                  .cover-slidehover-darken
+                    .bg-img-zoomimg-bg50
+                    .background-image: url(images/villa-6.jpg)
+                  %P.hounes__title Home 6
+                .hounes__btnappearup
+                  %btn.btnslide-bgitem もっと詳しく
+            %section.popular
+              .popular__header
+                %h2.main-titletween-animate-title Popular %Place
+                %p.sub-titletween-animate-title 人気の観光地で宿泊先を見つけましょう
+              .popular__innerappearup
+                .popular__container
+                  .popular__itemitem
+                    .popular__img
+                      =image_tag ("image-p1.jpg")
+                    .popular__title バリ
+                  .popular__itemitem
+                    .popular__img
+                      =image_tag ("image-p2.jpg")
+                    .popular__title ニューヨーク
+                  .popular__itemitem
+                    .popular__img
+                      =image_tag ("image-p3.jpg")
+                    .popular__title 香港
+                  .popular__itemitem
+                    .popular__img
+                      =image_tag ("image-p4.jpg")
+                    .popular__title 大阪
+                  .popular__btnappearup
+                    %btn.btncover-3ditem
+                      %span 一覧から探す
+          %aside.sideright
+            .side__inner
+              %span.tween-animate-title &copy;Code Mafia
+      %footer.footerappearup
+        .logoitem
           %img(src="images/logo.svg" alt="" class="logo__img")
-          %span.logo__stay Stay
-          %span.logo__world World
-        %ul.mobile-menu__main
-          %li.mobile-menu__item
-            %a.mobile-menu__link(href='#')
-              %span.main-title
-                Our Service
-              %span.sub-title
-                サービスについて
-            %a.mobile-menu__link(href='#')
-              %span.main-title
-                About Us
-              %span.sub-title
-                私たちについて
-            %a.mobile-menu__link(href='#')
-              %span.main-title
-                Contact Us
-              %span.sub-title
-                コンタクト方法
-    %script(src="scripts/vendors/swiper.min.js")
-    %script(src="scripts/vendors/TweenMax.min.js")
-    %script(src="scripts/vendors/scroll-polyfill.js")
-    %script(src="scripts/libs/scroll.js")
-    %script(src="scripts/libs/text-animation.js")
-    %script(src="scripts/libs/hero-slider.js")
-    %script(src="scripts/libs/mobile-menu.js")
-    %script(src="main.js")
+          %span.logo__stay My
+          %span.logo__world Forman
+        %nav.footer__nav
+          %ul.footer__ul
+            %li.footer__liitem
+              %a(href='#') Service
+            %li.footer__liitem
+              %a(href='#') Contact
+            %li.footer__liitem
+              %a(href='#') Company
+            %li.footer__liitem
+              %a(href='#') Sitemap
+          .footer__copyrightitem
+            &copy; JVSN09
+    %nav.mobile-menu
+      .logo
+        %img(src="images/logo.svg" alt="" class="logo__img")
+        %span.logo__stay Stay
+        %span.logo__world World
+      %ul.mobile-menu__main
+        %li.mobile-menu__item
+          %a.mobile-menu__link(href='#')
+            %span.main-title
+              Our Service
+            %span.sub-title
+              サービスについて
+          %a.mobile-menu__link(href='#')
+            %span.main-title
+              About Us
+            %span.sub-title
+              私たちについて
+          %a.mobile-menu__link(href='#')
+            %span.main-title
+              Contact Us
+            %span.sub-title
+              コンタクト方法
+
+    %button.btn.float Button
+    %button.btn.filled Button
+    %button.btn.letter-spacing Button
+    %button.btn.shadow Button
+    %button.btn.solid Button
+    %button.btn.slide-bg Button
+
+%script(src="scripts/vendors/swiper.min.js")
+%script(src="scripts/vendors/TweenMax.min.js")
+%script(src="scripts/vendors/scroll-polyfill.js")
+%script(src="scripts/libs/scroll.js")
+%script(src="scripts/libs/text-animation.js")
+%script(src="scripts/libs/hero-slider.js")
+%script(src="main.js")
+-# %script(src="scripts/libs/mobile-menu.js")

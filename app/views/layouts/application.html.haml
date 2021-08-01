@@ -2,10 +2,21 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title MyForeman
+    %title my-foreman
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -# %meta(charset="UFT-8")/
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+    %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
+    %meta(name="description" content="This site is a test site.")/
+    %link(rel="icon" href="image/favicon.png")/
+    %link(rel="stylesheet" href="styles/loder.css")/
+    -# %script(src="scripts/vendors/pace.min.js")/
+    -# %link(href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet")/
+    %link(rel="stylesheet" href="styles/vendors/bootstrap-reboot.css")/
+    %link(rel="stylesheet" href="styles/vendors/swiper.min.css")/
+    %link(rel="stylesheet" href="styles/users.css")/
   %body
     = yield
