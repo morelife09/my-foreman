@@ -141,20 +141,18 @@ main {
   &__title {
     position: relative;
 
-    @include p-base(
-      $display: none,
-      $width: 100px,
-      $height: 1px,
-      $top: 50%,
-      $left: -120px
-    ) {
-      background-color: $cBlack;
-      transform: translateY(-50%) scaleX(0);
-      transition: transform 0.3s ease 1.6s;
-      transform-origin: right;
-    }
-
-    
+    // @include p-base(
+    //   $display: none,
+    //   $width: 100px,
+    //   $height: 1px,
+    //   $top: 50%,
+    //   $left: -120px
+    // ) {
+    //   background-color: $cBlack;
+    //   transform: translateY(-50%) scaleX(0);
+    //   transition: transform 0.3s ease 1.6s;
+    //   transform-origin: right;
+    // }
   }
 
   &__sub {
@@ -212,9 +210,9 @@ main {
 .popular {
   &__inner {
     position: relative;
-    @include p-base($top: 10%, $height: 90%) {
-      background: $cBgGray;
-    }
+    // @include p-base($top: 10%, $height: 90%) {
+    //   background: $cBgGray;
+    // }
     // &::before {
     //   content: '';
     //   position: absolute;
@@ -350,12 +348,12 @@ main {
 .icon {
   position: relative;
 
-  @include p-base($left: -20px, $top: 50%, $width: 1em, $height: 1em) {
-    transform: translateY(-50%);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  // @include p-base($left: -20px, $top: 50%, $width: 1em, $height: 1em) {
+  //   transform: translateY(-50%);
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  // }
 
   &.twitter{
     &::before {
