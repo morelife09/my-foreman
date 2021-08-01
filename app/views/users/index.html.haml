@@ -3,6 +3,8 @@
   %head
   %body
 
+
+
     #global-container
       #container
         .mobile-menu__cover
@@ -25,6 +27,13 @@
         .cover-slide.hover-darken
           =image_tag asset_path("IMG_0969.jpeg"), alt:"", class:"img-zoom"
 
+      %button.btn.float Button
+      %button.btn.filled Button
+      %button.btn.letter-spacing Button
+      %button.btn.shadow Button
+      %button.btn.solid Button
+      %button.btn.slide-bg Button
+
       %btn.mobile-menu__btn
         %span
         %span
@@ -34,14 +43,13 @@
           .swiper-container
             .swiper-wrapper
               .swiper-slide
-              .hero__title
-                =image_tag ("image-1.jpg")
+                =image_tag asset_path("image-1.jpg"), alt:""
               .swiper-slide
-                =image_tag ("image-2.jpg")
+                =image_tag asset_path("image-2.jpg"), alt:""
               .swiper-slide
-                %img(src="images/image-3.jpg" alt="")
+                =image_tag asset_path("image-3.jpg"), alt:""
             .hero__footer
-              %img.hero__downarrow(src="images/arrow.svg")
+              =image_tag asset_path("arrow.svg"), alt:"", class:"hero__downarrow"
               %span.hero__scrolltext scroll
         #main-content
           %aside.sideleft
@@ -52,7 +60,7 @@
             %section.travel
               .travel__inner
                 .tarvel__imgcover-slide
-                  =image_tag ("image-p1.jpg"), alt:"", class:"img-zoom"
+                  =image_tag asset_path("image-p1.jpg"), alt:"", class:"img-zoom"
                 .travel__textsappearleft
                   .travel__texts-inner
                     .travel__titlemain-titleitem
@@ -73,27 +81,32 @@
                 .houses__item
                   .cover-slidehover-darken
                     .bg-img-zoomimg-bg50
-                    .background-image: url(images/villa-2.jpg)
+                    .background-image
+                      =image_tag asset_path("villa-1.jpg"), alt:""
                   %P.hounes__title Home 1
                 .hounes__item
                   .cover-slidehover-darken
                     .bg-img-zoomimg-bg50
-                    .background-image: url(images/villa-2.jpg)
+                    .background-image
+                      =image_tag asset_path("villa-2.jpg"), alt:""
                   %P.hounes__title Home 2
                 .hounes__item
                   .cover-slidehover-darken
                     .bg-img-zoomimg-bg50
-                    .background-image: url(images/villa-3.jpg)
+                    .background-image
+                      =image_tag asset_path("villa-3.jpg"), alt:""
                   %P.hounes__title Home 3
                 .hounes__item
                   .cover-slidehover-darken
                     .bg-img-zoomimg-bg50
-                    .background-image: url(images/villa-4.jpg)
+                    .background-image
+                      =image_tag asset_path("villa-4.jpg"), alt:""
                   %P.hounes__title Home 4
                 .hounes__item
                   .cover-slidehover-darken
                     .bg-img-zoomimg-bg50
-                    .background-image: url(images/villa-5.jpg)
+                    .background-image
+                      =image_tag asset_path("villa-5.jpg"), alt:""
                   %P.hounes__title Home 5
                 .hounes__item
                   .cover-slidehover-darken
@@ -110,19 +123,19 @@
                 .popular__container
                   .popular__itemitem
                     .popular__img
-                      =image_tag ("image-p1.jpg")
+                      =image_tag asset_path("image-p1.jpg")
                     .popular__title バリ
                   .popular__itemitem
                     .popular__img
-                      =image_tag ("image-p2.jpg")
+                      =image_tag asset_path("image-p2.jpg")
                     .popular__title ニューヨーク
                   .popular__itemitem
                     .popular__img
-                      =image_tag ("image-p3.jpg")
+                      =image_tag asset_path("image-p3.jpg")
                     .popular__title 香港
                   .popular__itemitem
                     .popular__img
-                      =image_tag ("image-p4.jpg")
+                      =image_tag asset_path("image-p4.jpg")
                     .popular__title 大阪
                   .popular__btnappearup
                     %btn.btncover-3ditem
@@ -169,13 +182,6 @@
               Contact Us
             %span.sub-title
               コンタクト方法
-
-    %button.btn.float Button
-    %button.btn.filled Button
-    %button.btn.letter-spacing Button
-    %button.btn.shadow Button
-    %button.btn.solid Button
-    %button.btn.slide-bg Button
 
 %script(src="scripts/vendors/swiper.min.js")
 %script(src="scripts/vendors/TweenMax.min.js")
